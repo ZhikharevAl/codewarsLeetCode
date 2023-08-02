@@ -31,7 +31,7 @@ distinctPrimeFactors(nums)
 '''
 
 
-def distinctPrimeFactors(nums) -> int:
+def distinctPrimeFactors(nums: list) -> int:
     a = set()
     for x in nums:
         j = 2
