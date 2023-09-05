@@ -1,0 +1,16 @@
+fun capitalize(text: String): List<String> {
+    val even = StringBuilder()
+    val odd = StringBuilder()
+
+    for (i in text.indices) {
+        if (i % 2 == 0) {
+            even.append(text[i].uppercaseChar())
+            odd.append(text[i].lowercaseChar())
+        } else {
+            even.append(text[i].lowercaseChar())
+            odd.append(text[i].uppercaseChar())
+        }
+    }
+
+    return listOf(even.toString(), odd.toString())
+}
