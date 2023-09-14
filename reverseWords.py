@@ -9,3 +9,9 @@ def reverseWords(self, s: str) -> str:
             else:
                 new_reverse_world += s.split(' ')[i][::-1]
         return new_reverse_world
+
+def reverseWord(self, s: str) -> str:
+        words = s.split(' ')
+        reversed_words = [word[::-1] for word in words]
+        new_reverse_world = ' '.join(reversed_words)
+        return new_reverse_world
