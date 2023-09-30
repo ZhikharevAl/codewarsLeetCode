@@ -1,3 +1,9 @@
+
+# def income(prices):
+#     return sum([prices[i] for i in range(0, len(prices)) if i % 2 == 1]) - sum(
+#         [prices[i] for i in range(0, len(prices)) if i % 2 == 0])
+
+
 def income(prices):
     odd_prices = sum(prices[1::2])
     even_prices = sum(prices[::2])
