@@ -5,3 +5,7 @@ def income(prices):
 
 
 result = income(prices)
+
+
+def test_income():
+    assert income([800, 1000, 1100, 1300]) == 400, "Should be 400"
