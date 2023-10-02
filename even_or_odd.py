@@ -3,4 +3,6 @@ def even_or_odd(number):
     return ["Even", "Odd"][number % 2]
 
 
-print(even_or_odd(2))
+def test_even_or_odd():
+    assert even_or_odd(2) == "Even"
+    assert even_or_odd(3) == "Odd"
