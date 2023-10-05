@@ -1,9 +1,15 @@
+import pytest
+
+
 def kebab_to_upper_camel(message):
     return "".join([word.title() for word in message.split("-")])
 
 
-def test_kebab_to_upper_camel():
-    assert kebab_to_upper_camel("the-nina-project") == "TheNinaProject", "iSupposeSo TheNinaProject"
-    assert kebab_to_upper_camel("hello-world") == "HelloWorld", "iSupposeSo HelloWorld"
-    assert kebab_to_upper_camel("hello-world-foo-bar") == "HelloWorldFooBar", "iSupposeSo HelloWorldFooBar"
-    assert kebab_to_upper_camel("hello-world-foo-bar-baz") == "HelloWorldFooBarBaz", "iSupposeSo HelloWorldFooBarBaz"
+@pytest.mark.parametrize("input_str, expected_output", [
+    ("the-nina-project", "TheNinaProject"),
+    ("hello-world", "HelloWorld"),
+    ("", ""),
+    ("no-dashes", "NoDashes"),
+])
+def test_kebab_to_upper_camel(input_str, expected_output):
+    assert kebab_to_upper_camel(input_str) == expected_output
