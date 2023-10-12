@@ -12,5 +12,5 @@ def is_substring_included(message1, message2):
 #     ('Лия', 'Привет, Лия', True),
 #     ('', '', True),
 # ])
-# def test_custom_sort(message1, message2, result):
+# def test_is_substring_included(message1, message2, result):
 #     assert is_substring_included(message1, message2) == result
